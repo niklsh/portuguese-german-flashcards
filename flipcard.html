@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Portuguese → German Flipcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🧠 Language Learning Quiz — Flipcard Edition</h1>
+            <p>Portuguese → German • Anki-Style Interactive Flipcards</p>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-text" id="progressText">0 / 12</span>
+        </div>
+
+        <!-- Category Display -->
+        <div class="category-display" id="categoryDisplay">
+            <span class="category-icon" id="categoryIcon">🚊</span>
+            <span class="category-name" id="categoryName">Transportation & Train Travel</span>
+        </div>
+
+        <!-- Main Card Container -->
+        <div class="card-container" id="cardContainer">
+            <div class="flipcard" id="flipcard">
+                <div class="flipcard-inner">
+                    <!-- Front (Portuguese) -->
+                    <div class="flipcard-front">
+                        <div class="card-content">
+                            <div class="language-label">🇵🇹 PORTUGUÊS</div>
+                            <div class="word" id="portugueseWord">trem</div>
+                            <div class="flip-hint">
+                                <span class="flip-icon">🔄</span>
+                                <span>Click to flip</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back (German) -->
+                    <div class="flipcard-back">
+                        <div class="card-content">
+                            <div class="language-label">🇩🇪 DEUTSCH</div>
+                            <div class="word" id="germanWord">der Zug</div>
+                            <div class="pronunciation" id="pronunciation">[deːɐ̯ t͡suːk]</div>
+                            <button class="speak-btn" id="speakBtn">🔊 Listen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Evaluation Buttons (shown after flip) -->
+        <div class="evaluation-container" id="evaluationContainer" style="display: none;">
+            <h3>How did you do?</h3>
+            <div class="evaluation-buttons">
+                <button class="eval-btn wrong-btn" id="wrongBtn">❌ Wrong</button>
+                <button class="eval-btn right-btn" id="rightBtn">✅ Right</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation" id="navigation">
+            <button class="nav-btn start-btn" id="startBtn">🚀 Start Quiz</button>
+            <button class="nav-btn next-btn" id="nextBtn" style="display: none;">➡️ Next Card</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="results-container" id="resultsContainer" style="display: none;">
+            <h2>🎉 Quiz Complete!</h2>
+            <div class="results-summary" id="resultsSummary">
+                <div class="score-display">
+                    <span class="score" id="finalScore">0/12</span>
+                    <span class="percentage" id="finalPercentage">0%</span>
+                </div>
+            </div>
+            <div class="category-results" id="categoryResults"></div>
+            <button class="restart-btn" id="restartBtn">🔄 Try Again</button>
+        </div>
+
+        <!-- Categories Overview Panel -->
+        <div class="categories-panel" id="categoriesPanel">
+            <h3>📚 Categories (12 total)</h3>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
